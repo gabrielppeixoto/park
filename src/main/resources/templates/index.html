@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Park Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet"/>
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Capa</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Contatos</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="inner cover" role="main">
+            <p class="lead">
+                Selecionar funcionário
+            </p>
+            <div class="col-lg-4 align-content-center">
+                <select class="form-control" id="empList" name="empList">
+                    <option value="">Selecione...</option>
+                    <option th:each="emp : ${employees}" th:value="${emp.name}" th:text="${emp.name}" th:href="@{'/app/v1/management'}"></option>
+                </select>
+            </div>
+            <a class="btn btn-primary" th:href="@{'/app/v1/management'}" role="button">Prosseguir</a>
+            <a class="btn btn-primary" th:href="@{'/app/v1/employee'}" role="button">Ou cadastre um novo funcionário</a>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Gabriel Peixoto</p>
+            </div>
+        </footer>
+    </div>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

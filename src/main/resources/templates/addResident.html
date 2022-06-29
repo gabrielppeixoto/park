@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar carro residente - Park Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+        rel="stylesheet"/>
+</head>
+<body>
+<h2>Alteração de tipo de carro</h2>
+
+<p>Selecione o carro:</p>
+<div class="col-lg">
+  <form method="post" th:object="${car}" th:action="@{/app/v1/management/adicionaResidente}">
+    <div class="form-group">
+      <ul>
+        <li th:each="idt : ${notResidents}">
+          <input type="radio" id="carIdentities" th:text="${idt}" th:value="${idt}" th:name="carId">
+        </li>
+      </ul>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar como residente</button>
+  </form>
+
+  <button class="btn-primary" th:href="@{'/app/v1/management'}">Voltar</button>
+</div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

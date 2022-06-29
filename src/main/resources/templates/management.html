@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Park management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet"/>
+</head>
+<body>
+    <h2>Bem vindo</h2>
+    <h3>O que deseja fazer?</h3>
+    <a class="btn btn-primary" th:href="@{'/app/v1/employee'}" role="button">Cadastrar um usuário</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" th:href="@{'/app/v1/car'}" role="button">Cadastrar um carro</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" th:href="@{'/app/v1/management/entrance'}" role="button">Registrar uma entrada</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" th:href="@{'/app/v1/management/exit'}" role="button">Registrar uma saída</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" th:href="@{'/app/v1/management/adicionaOficial'}" role="button">Adicionar veículo oficial</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" th:href="@{'/app/v1/management/adicionaResidente'}" role="button">Adicionar veículo residente</a>
+    <br>
+    <br>
+    <a class="btn btn-secondary" href="#" role="button">Iniciar mês</a>
+    <br>
+    <br>
+    <a class="btn btn-secondary" href="#" role="button">Gerar informações de veículos residentes</a>
+    <br>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

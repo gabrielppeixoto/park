@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de saída - Park management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet"/>
+</head>
+<body>
+    <h2>Registro de entradas de veículos</h2>
+
+    <p>Selecione o carro:</p>
+    <div class="col-lg">
+        <form method="post" th:object="${entranceAndExitRegistry}" th:action="@{/app/v1/management/exit/process}">
+            <div class="form-group">
+                <ul>
+                    <li th:each="idt : ${carIdentities}">
+                        <input type="radio" id="carIdentities" th:text="${idt}" th:value="${idt}" th:name="carId">
+                    </li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar saída</button>
+        </form>
+
+        <button class="btn-primary" th:href="@{'/app/v1/management'}">Voltar</button>
+    </div>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

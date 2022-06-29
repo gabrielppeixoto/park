@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Park Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet"/>
+</head>
+<body>
+    <h2>Cadastro de carros</h2>
+    <form th:object="${car}" method="post" th:action="@{/app/v1/car/new}">
+        <div class="form-group">
+            <label for="montadora">Montadora</label>
+            <input type="text" th:field="*{brand}" class="form-control" id="montadora" placeholder="Digite a fabricante">
+        </div>
+        <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <input type="text" th:field="*{model}" class="form-control" id="modelo" placeholder="Digite o nome do carro">
+        </div>
+        <div class="form-group">
+            <label for="ano">Ano de fabricação</label>
+<!--            converter para Integer-->
+            <input type="text" th:field="*{year}" class="form-control" id="ano" placeholder="Digite o ano de fabricação">
+        </div>
+        <div class="form-group">
+            <label for="placa">Placa do veículo</label>
+            <input type="text" th:field="*{identity}" class="form-control" id="placa" placeholder="Digite a placa do veículo">
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
