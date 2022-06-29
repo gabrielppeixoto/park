@@ -15,6 +15,6 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     //seleciona todos os usuários
-    @Query(value = "select * from user", nativeQuery = true)
+    @Query(value = "select * from users", nativeQuery = true)
     public List<User> listAllUsers();
 }
