@@ -1,5 +1,5 @@
 /**
- * Gerencia as requisições feitas para a rota /app/v1
+ * Gerencia as requisições feitas para a rota /
  * @author Gabriel Peixoto
  */
 
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/app/v1")
+@RequestMapping("/")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class HomeController {
     private EmployeeRepository employeeRepository;
