@@ -40,6 +40,6 @@ public class EmployeeController {
     public String saveEmployee(@ModelAttribute("employee") Employee employee)
     {
         employeeRepository.save(employee);
-        return "redirect:/app/v1";
+        return "redirect:/";
     }
 }
