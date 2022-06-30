@@ -1,0 +1,10 @@
+INSERT INTO `parking`.`users` (`user_id`, `user_cpf`, `user_name`, `car_id`) VALUES ('1', '12345678900', 'Antonio Alves', '3');
+INSERT INTO `parking`.`users` (`user_id`, `user_cpf`, `user_name`, `car_id`) VALUES ('2', '23456789011', 'Bruna Barcelos', '1');
+INSERT INTO `parking`.`users` (`user_id`, `user_cpf`, `user_name`, `car_id`) VALUES ('4', '22233344455', 'Duda Dias', '2');
+INSERT INTO `parking`.`employee` (`id`, `employee_name`, `employee_ssn`) VALUES ('1', 'Alberto Silva', '12345');
+INSERT INTO `parking`.`employee` (`id`, `employee_name`, `employee_ssn`) VALUES ('2', 'Bernardo Carvalho', '23456');
+INSERT INTO `parking`.`employee` (`id`, `employee_name`, `employee_ssn`) VALUES ('3', 'Carla Dias', '34567');
+INSERT INTO `parking`.`employee` (`id`, `employee_name`, `employee_ssn`) VALUES ('4', 'Eduardo S.', '45678');
+INSERT INTO `parking`,`car` (`car_id`, `car_brand`, `car_identity`, `car_model`, `car_type`, `car_year`, `user_id`) VALUES ('1', 'Ford', 'abc1234', 'Focus', 'NON_RESIDENT_CAR', '1998', '2');
+INSERT INTO `parking`,`car` (`car_id`, `car_brand`, `car_identity`, `car_model`, `car_type`, `car_year`, `user_id`) VALUES ('2', 'Fiat', 'bcd2345', 'Uno', 'RESIDENT_CAR', '2010', '4');
+INSERT INTO `parking`,`car` (`car_id`, `car_brand`, `car_identity`, `car_model`, `car_type`, `car_year`, `user_id`) VALUES ('3', 'Fiat', 'cde3456', 'Palio', 'RESIDENT_CAR', '2007', '1');
